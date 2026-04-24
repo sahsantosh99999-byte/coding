@@ -270,9 +270,9 @@ nav {
 
 
   .avatar-initials {
-  width: 180px;
-  height: 180px;
-  border-radius: 70%;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
    border: 1.5px solid var(--gold2);
   background: rgba(184,137,42,0.12);
   display: flex;
@@ -288,9 +288,11 @@ nav {
 .avatar-img {
   width: 100%;
   height: 100%;
+  max-width: 280px;
+  max-height: 280px;
   object-fit: cover; /* keeps image perfect */
-  border-radius: 70%;
-object-position: center 40%;}
+  border-radius: 50%;
+object-position: center 20%;}
 
 
 .avatar-name-tag {
@@ -309,10 +311,10 @@ object-position: center 40%;}
 }
 
 .hero-badge-otw {
-  position: absolute; bottom: 20px; left: 20px; right: 20px;
+  position: absolute; bottom: 10px; left: 20px; right: 20px;
   background: rgba(6,16,31,0.85);
   border: 1px solid var(--gold);
-  padding: 10px 14px;
+  padding: 5px 14px;
   display: flex; align-items: center; gap: 10px;
   z-index: 2;
   backdrop-filter: blur(8px);
@@ -697,14 +699,12 @@ section { padding: 6rem 5%; }
    CONTACT
 ══════════════════════════════════════ */
 #contact { background: var(--cream); }
-
 .contact-layout {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 5rem;
-  align-items: start;
+  align-items: flex-start;
 }
-
 .contact-intro p {
   font-size: 1rem; line-height: 1.85;
   color: #3a4f6a; font-weight: 300;
