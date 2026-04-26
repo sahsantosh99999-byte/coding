@@ -246,6 +246,7 @@ nav {
   aspect-ratio: 3/4;
   background: var(--ink3);
   border: 1px solid var(--border-mid);
+  border-radius: 32px;
   display: flex; flex-direction: column;
   align-items: center; justify-content: center;
   position: relative; overflow: hidden;
@@ -329,16 +330,6 @@ object-position: center 20%;}
   text-transform: uppercase; letter-spacing: 0.1em;
   color: var(--gold3);
 }
-
-/* Decorative corner lines */
-.hero-corner {
-  position: absolute;
-  width: 30px; height: 30px;
-}
-.hero-corner.tl { top: -6px; left: -6px; border-top: 2px solid var(--gold); border-left: 2px solid var(--gold); }
-.hero-corner.tr { top: -6px; right: -6px; border-top: 2px solid var(--gold); border-right: 2px solid var(--gold); }
-.hero-corner.bl { bottom: -6px; left: -6px; border-bottom: 2px solid var(--gold); border-left: 2px solid var(--gold); }
-.hero-corner.br { bottom: -6px; right: -6px; border-bottom: 2px solid var(--gold); border-right: 2px solid var(--gold); }
 
 /* ══════════════════════════════════════
    OPEN TO WORK TICKER
@@ -834,7 +825,15 @@ footer {
 ══════════════════════════════════════ */
 @media (max-width: 900px) {
   #hero { grid-template-columns: 1fr; padding-top: 80px; }
-  .hero-right { display: none; }
+  .hero-right {
+    display: block;
+    width: 100%;
+    padding-top: 3rem;
+  }
+  .hero-visual-frame {
+    width: min(100%, 340px);
+    margin: 0 auto;
+  }
   .about-layout { grid-template-columns: 1fr; gap: 2rem; }
   .edu-grid { grid-template-columns: 1fr; }
   .skills-layout { grid-template-columns: 1fr; gap: 2rem; }
